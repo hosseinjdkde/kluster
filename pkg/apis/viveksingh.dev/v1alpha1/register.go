@@ -8,7 +8,7 @@ import (
 
 var SchemeGroupVersion = schema.GroupVersion{
 	Group:   "viveksingh.dev",
-	Version: "v1myopr",
+	Version: "v1alpha1",
 }
 
 var (
@@ -26,6 +26,7 @@ func init() {
 
 func addKnownTypes(scheme *runtime.Scheme) error {
 	scheme.AddKnownTypes(SchemeGroupVersion, &Kluster{}, &KlusterList{})
+
 	metav1.AddToGroupVersion(scheme, SchemeGroupVersion)
 	return nil
 }
